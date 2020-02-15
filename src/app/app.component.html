@@ -1,7 +1,11 @@
 
-<h1>Angular expression</h1>
-<p>é quando você quer apresentar o conteudo de uma propriedade utilizando </p>
-
-<h1>data binding - one way</h1>
-<p>é um data binding unidirecional </p>
-<img [src]="url" [alt]="description">
+<!--
+  Inbound properties: passa a string completa para o componente e o componente
+  O componente recebe o parâmetro pela decorator @Input()
+  O data binding permanece da mesma forma
+-->
+<app-photo
+  *ngFor="let photo of photos"
+  [url]="photo.url"
+  [description]="photo.description">
+</app-photo>
